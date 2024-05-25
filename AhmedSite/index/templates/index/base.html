@@ -1,0 +1,18 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "{% static 'index/style.css' %}">
+    </head>
+    
+    <div class="topnav">
+        <a class="active" href="#home">Intro</a>
+        <a href="{% url 'index:Home' %}">Home</a>
+        <a href="{% url 'index:Resume' %}">Resume</a>
+        <a href="{% url 'index:About' %}">About Me</a>
+      </div>
+
+    {% block content %}
+    {% endblock %}
+</html>
